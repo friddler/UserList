@@ -18,6 +18,7 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Users")
+            
         }
     }
 }
@@ -32,15 +33,11 @@ struct RowView : View {
     
     var body: some View {
         HStack{
-            AsyncImage(url: user.image) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fill)
-            } placeholder: {
-                ProgressView()
-            }
+            Image(user.image)
+            .resizable()
             .frame(width: 50, height: 50)
-            .cornerRadius(25)
-            
+            .cornerRadius(100)
+
             VStack(alignment: .leading) {
                 Text(user.name)
                     .font(.headline)

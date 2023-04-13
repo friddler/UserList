@@ -13,12 +13,14 @@ struct User : Identifiable, Equatable {
     var id = UUID()
     var name: String
     var email : String
-    var image : URL?
+    var image : String
+    var description : String
     
-    init(name: String, email: String, image: URL?){
+    init(name: String, email: String, image: String, description: String){
         self.name = name
         self.email = email
         self.image = image
+        self.description = description
     }
     
     
