@@ -106,6 +106,7 @@
 		0ED7F7F229E805EA007CC216 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
+				0ED7F82C29E814A2007CC216 /* Model */,
 				0ED7F7F329E805EA007CC216 /* UserListApp.swift */,
 				0ED7F81D29E80617007CC216 /* Views */,
 				0ED7F7F729E805EB007CC216 /* Assets.xcassets */,
@@ -146,11 +147,18 @@
 			isa = PBXGroup;
 			children = (
 				0ED7F7F529E805EA007CC216 /* ContentView.swift */,
-				0ED7F81E29E80650007CC216 /* UserViewModel.swift */,
-				0ED7F82029E806D2007CC216 /* User.swift */,
 				0ED7F82A29E81208007CC216 /* DetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0ED7F82C29E814A2007CC216 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0ED7F81E29E80650007CC216 /* UserViewModel.swift */,
+				0ED7F82029E806D2007CC216 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
