@@ -15,20 +15,20 @@ class UserViewModel : ObservableObject {
     }
     
     func addMockData(){
-        let names = ["Frida Nilsson", "Sofie Fröberg", "Malin Henriksson", "Mr.Rune"]
-        let emails = ["Frida@icloud.com", "Sofie@icloud.com", "Malin@icloud.com", "Rune@Rune.nu"]
-        let descriptions = ["Frida is a 26-year-old app development student who lives in Eskilstuna and is soon moving to Linköping. She's a gamer and music enthusiast who enjoys spending her free time exploring the latest games and tunes. One interesting fact about Frida is that she has a pet cat named Rune, who is also one of the users in our app", "Sofie is a 25-year-old nurse who has been friends with Frida for over 20 years. She lives with her boyfriend Mark and has a horse named Maya", "Malin is a 41-year-old doctor in gender equality, she has a daughter named Emin and Malin is also Frida's sister. Malin lives in Linköping and she loves her work and her family.", "Rune is a spunky 6-year-old cat who shares a home with his owner, Frida. He's full of energy and seems to have the zoomies almost every day. Despite his energetic antics, Rune can be quite mischievous, and he's been known to wake up Frida with a playful slap to the face. However, despite his mischievous tendencies, Rune is also an affectionate and loving cat who enjoys cuddling with Frida whenever he gets the chance."]
-        let images = ["frida", "sofie", "malin", "rune"]
+        users.append(User(name: "Frida Nilsson", email: "Frida@icloud.com", image: "frida", description: "Meet Frida, the 26-year-old mastermind behind the app you love to use. When she's not coding up a storm, you can find her ruling the gaming world and bopping to some sick beats. She's leaving Eskilstuna soon to take over Linköping, but not before introducing you to her trusty sidekick, Rune the cat. Yup, that's right, we've got a feline user on our hands. Get ready to have your mind blown by Frida's tech skills and Rune's paw-some profile."))
+        users.append(User(name: "Sofie Fröberg", email: "Sofie@icloud.com", image: "sofie", description: "Meet Sofie - the 25-year-old nurse with a heart of gold and a love for all things equine! She resides in Linköping with her boyfriend Mark, who is either really lucky or really brave to have landed Sofie's heart. When she's not saving lives at work, she's horsing around with Maya, her beloved mare. And let's not forget her bond with Frida, her BFF for over 20 years! With Sofie around, there's sure to be lots of laughter, friendship, and perhaps a few neigh-sayers along the way."))
+        users.append(User(name: "Malin Henriksson", email: "Malin@icloud.com", image: "malin", description: "Meet Malin, the 41-year-old gender equality doctor who can diagnose and cure even the toughest cases of sexism. She's got a daughter named Emin, who's as cool as the rapper with the same name, and she's also Frida's sister, which means she's genetically engineered to be awesome. Malin lives in Linköping, where she spreads love, laughter, and equity like a contagious disease. When she's not busy saving the world, she enjoys spending quality time with her family and binge-watching Grey's Anatomy to sharpen her doctoring skills."))
+        users.append(User(name: "Mr.Rune", email: "Rune@Rune.nu", image: "rune", description: "Rune is a spunky 6-year-old cat who shares a home with his owner, Frida. He's full of energy and seems to have the zoomies almost every day. Despite his energetic antics, Rune can be quite mischievous, and he's been known to wake up Frida with a playful slap to the face. However, despite his mischievous tendencies, Rune is also an affectionate and loving cat who enjoys cuddling with Frida whenever he gets the chance."))
+        users.append(User(name: "Anders Goober Carling", email: "Anders Goober Carling", image: "anders", description: "Introducing Anders, the 28-year-old gamer from Norrtälje who can run faster than his internet connection. He's not just a keyboard warrior though, he also creates epic music that even Mozart would be jealous of. And when he's not saving virtual worlds, he's cooking up a storm in the kitchen, with a pasta carbonara that'll make you cry tears of joy. But that's not all, Anders is also a top-tier uncle, making him the ultimate package deal."))
         
-        
-        for i in 0..<names.count {
-            let name = names[i]
-            let email = emails[i]
-            let description = descriptions[i]
-            let image = images[i]
-            
-            let user = User(name: name, email: email, image: image, description: description)
-            users.append(user)
+    }
+    func updateUserDescription(user: User, description: String){
+        if let index = users.firstIndex(where: {$0.name == user.name}) {
+            users[index].description = description
         }
+        
     }
 }
+
+
+
